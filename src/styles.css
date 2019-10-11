@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 640px;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header, footer {
+    height: 88px;
+    padding: 30px;
+    user-select: none;
+    text-align: right;
+    background-color: #3D9970
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    color: white;
+}
+
+.container {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #FF851B;
+    transition: 0.2s ease;
+}
+
+button[type="submit"]:hover,
+#createNewPost:hover,
+#createNewPost:focus {
+    background-color: #FF851B;
+    color: black;
+}
+
+.login_form {
+    height: 200px;
+    padding: 20px;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #3d997049;
+}
+
+.registration_form {
+    width: 330px;
+    height: 350px;
+    padding: 20px;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #3d997049;
+}
+
+select,
+input[type="radio"],
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+input, select {
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+}
+
+.modalInput[placeholder="Title"] {
+    height: 50px;
+    width: 100%;
+}
+
+.modalInput[placeholder="Description"] {
+    height: 100px;
+    width: 100%;
+}
+.name {
+    min-width: 290px;
+}
+
+.gender {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subDiv {
+    width: 280px;
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+button[type="submit"], #createNewPost {
+    width: 90px;
+    height: 36px;
+    background-color: #3D9970;
+    border: none;
+    border-radius: 2px;
+    color: #FFF;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+/* Home style --------------------------------------*/
+.container_home {
+    height: 85%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    user-select: unset;
+    justify-content: center;
+    min-width: 750px;
+}
+
+.container_bloggers ul {
+    height: 95%;
+    padding: 10px;
+    overflow: auto;
+    list-style: none;
+}
+
+#container_posts {
+    height: 95%;
+    flex-basis: 60%;
+    min-width: 510px;
+    padding: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+ul li {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #97bdad5d;
+}
+
+.posts {
+    min-height: 135px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background: #97bdad5d;
+}
+
+.namesDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.descriptionDiv {
+    padding-top: 20px;
+}
+
+/* .posts {
+
+} */
+/* Home style --------------------------------------*/
+.container_workspace {
+    margin: 30px 20px;
+    height: 75%;
+    min-width: 690px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.newPost {
+    padding: 16px 10px 10px 10px;
+    display: flex;
+    user-select: none;
+    align-items: center;
+}
+
+#backModal {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+#modal {
+    padding: 30px;
+    min-width: 40%;
+    min-height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(255, 255, 255);
+    transform: translate(-50%, -50%);
+}
+
+.workspace_posts {
+    overflow: auto;
+    max-height: 500px;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 100px;
+    border-radius: 50%;
+    margin: 0 5px 5px 0;
+}
+
+#createNewPost {
+    width: 120px;
+    margin-left: auto;
+}
+
+#add {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+}

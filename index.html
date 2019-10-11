@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Web Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+        <header>
+            <a href="login.html">Log in</a>
+            <a href="registration.html">Registration</a>
+        </header>
+        <div class="container_home">
+            <aside class="container_bloggers">
+                <ul id="bloggers">                   
+                </ul>
+            </aside>
+            <section id="container_posts">
+            </section>
+        </div>
+        <footer>© 2019 ColibriWP. Built using WordPress.</footer>
+        <script>
+            const ul = document.getElementById("bloggers");
+            const container_posts = document.getElementById("container_posts");
+            fetch("https://5d8e0901370f02001405c7c9.mockapi.io/api/v1/postblog/users")
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(blogger => {
+                        let li = document.createElement("li"),
+                        img = document.createElement("img"),
+                        span = document.createElement("span");
+                        img.src = blogger.avatar;
+                        span.innerHTML = `${blogger.name}`;
+                        ul.appendChild(li);
+                        li.appendChild(img);
+                        li.appendChild(span);
+                    });
+                })
+                .catch(error => console.log(JSON.stringify(error)))
+            fetch("https://5d8e0901370f02001405c7c9.mockapi.io/api/v1/postblog/postblog")
+                .then(response => response.json())
+                .then(data => {
+                    data.forEach(item => {
+                        let post = document.createElement("article"),
+                        namesDiv = document.createElement("div"),
+                        descriptionDiv = document.createElement("div"),
+                        authorName = document.createElement("h1"),
+                        postTitle = document.createElement("h1"),
+                        description = document.createElement("p");
+
+                        post.className = "posts";
+                        namesDiv.className = "namesDiv";
+                        descriptionDiv.className = "descriptionDiv";
+
+
+                        container_posts.appendChild(post);
+                        post.appendChild(namesDiv);
+                        post.appendChild(descriptionDiv);
+                        namesDiv.appendChild(authorName);
+                        namesDiv.appendChild(postTitle);
+                        descriptionDiv.appendChild(description);
+
+                        authorName.innerHTML = `${item.author}`;
+                        postTitle.innerHTML = `${item.title}`;
+                        description.innerHTML = `${item.description}`;
+                    })
+                })
+                fetch("https://5d8e0901370f02001405c7c9.mockapi.io/api/v1/postblog/postblog/")
+                    .then(response => response.json())
+                    .then(data => console.log(data))
+        </script>
+</body>
+</html>

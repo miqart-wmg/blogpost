@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Workspace</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+        <header>
+            <a href="index.html">Home</a>
+        </header>
+        <div id="backModal">
+                <div id="modal">
+                    <p>Title</p>
+                    <input type="text" placeholder="Title" class="modalInput">
+                    <p>Description</p>
+                    <input type="text" placeholder="Description" class="modalInput">
+                    <button type="submit" id="add">Add</button> 
+                </div>
+            </div>
+        <div class="container_workspace">
+            <div class="newPost">
+                <img src="./src/avatar.jpg">
+                <p>Name Surname</p>
+                <button id="createNewPost">Create new Post</button>
+            </div>
+            <div class="workspace_posts">
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+                <div class="posts"></div>
+            </div>
+        </div>
+        <footer>© 2019 ColibriWP. Built using WordPress</footer>
+        <script>
+            const create = document.getElementById("createNewPost");
+            const backModal = document.getElementById("backModal");
+            const modal = document.getElementById("modal");
+            create.addEventListener("click", () => {
+                backModal.style.display = "block";
+            })
+            backModal.addEventListener("click", (e) => {
+                if(e.target === backModal) backModal.style.display = "none";
+            })
+        </script>
+</body>
+</html>
