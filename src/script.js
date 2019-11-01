@@ -43,7 +43,7 @@ function login() {
     })
     .then(res => res.json())
     // .then(data => {
-    //     fetch(`https://it-blog-posts.herokuapp.com/api/meetups?access_token=${data.id}`)
+    //    fetch(`https://it-blog-posts.herokuapp.com/api/meetups?access_token=${data.id}`)
     // })
     .then(() => window.open("workspace.html", "_self"))
     .catch(error => alert(error))
