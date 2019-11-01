@@ -14,9 +14,11 @@
             <a href="login.html">Log in</a>
         </header>
         <div class="container">
-            <form class="registration_form">
-                <input type="text" name="firstname" id="firstname" class="name" placeholder="First Name">
-                <input type="text" name="lastname" id="lastname" class="name" placeholder="Last Name">
+            <div class="registration_form">
+                <input type="text" name="username" id="usernameInp" class="name" placeholder="Username">
+                <input type="text" name="lastname" id="lastnameInp" class="name" placeholder="Lastname">
+                <input type="email" name="email" id="emailInp" class="name" placeholder="Email">
+                <input type="password" name="password" id="passwordInp" class="name" placeholder="Password">
                 <select name="City" id="city">
                     <option value="City">City</option>
                     <option value="Yerevan">Yerevan</option>
@@ -25,11 +27,11 @@
                 </select>
                 <div class="gender">
                     <div>
-                        <input type="radio" name="gender" id="gender">
+                        <input type="radio" name="gender">
                         <label for="gender" id="MA">Male</label>
                     </div>
                     <div>
-                        <input type="radio" name="gender" id="gender">
+                        <input type="radio" name="gender">
                         <label for="gender">Female</label>
                     </div>
                 </div>
@@ -38,11 +40,11 @@
                         <input type="checkbox" name="email" id="email">
                         <label for="email">Send me Email</label>
                     </div>
-                    <button type="submit" class="sub">Submit</button>
+                    <button type="submit" class="sub" id="regSub">Submit</button>
                 </div>  
-            </form>
+            </div>
         </div>
         <footer>© 2019 ColibriWP. Built using WordPress</footer>
-        <!-- <script src="/src/script.js"></script> -->
+        <script src="./src/script.js"></script>
 </body>
 </html>
