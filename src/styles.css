@@ -1,3 +1,11 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    display: none;
+    text-align: center;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +35,7 @@ footer {
 }
 
 .container {
-    padding: 100px;
+    padding: 50px 100px 25px 100px;
     display: flex;
     justify-content: center;
 }
@@ -50,8 +58,12 @@ button[type="submit"]:hover,
     color: black;
 }
 
+.login_form input, button, div {
+    margin: 11px;
+}
+
 .login_form {
-    height: 200px;
+    width: 250px;
     padding: 20px;
     border-radius: 2%;
     display: flex;
@@ -62,14 +74,18 @@ button[type="submit"]:hover,
     background: #3d997049;
 }
 
+.registration_form input, select {
+    margin: 11px; 
+}
+
 .registration_form {
     width: 330px;
-    height: 350px;
     padding: 20px;
     border-radius: 2%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-content: center;
     flex-wrap: wrap;
     background: #3d997049;
 }
@@ -105,12 +121,23 @@ input, select {
     justify-content: space-between;
 }
 
+.gender div {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
 .subDiv {
     width: 280px;
     display: flex;
     justify-content: space-between; 
     flex-wrap: wrap;
     align-items: center;
+    margin: 0;
+}
+
+.subDiv button {
+    margin: 0;
 }
 
 button[type="submit"], #createNewPost {
